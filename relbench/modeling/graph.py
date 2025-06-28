@@ -213,7 +213,7 @@ def get_link_train_table_input(
         coo_indices,
         torch.ones(coo_indices.size(1), dtype=bool),
         (len(src_node_idx), task.num_dst_nodes),
-    )
+    )# 构建稀疏矩阵，coo_indices表示坐标，第二个参数表示按顺序的坐标的对应值，第三个参数表示矩阵大小
     dst_node_indices = sparse_coo.to_sparse_csr()
 
     time: Optional[Tensor] = None

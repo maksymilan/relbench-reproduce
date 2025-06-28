@@ -11,8 +11,8 @@ from relbench.datasets import get_dataset
 from relbench.tasks import get_task
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--dataset", type=str, default="rel-stack")
-parser.add_argument("--task", type=str, default="user-post-comment")
+parser.add_argument("--dataset", type=str, default="rel-amazon")
+parser.add_argument("--task", type=str, default="user-churn")
 parser.add_argument("--seed", type=int, default=42)
 args = parser.parse_args()
 

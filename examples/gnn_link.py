@@ -70,7 +70,8 @@ try:
     with open(stypes_cache_path, "r") as f:
         col_to_stype_dict = json.load(f)
     for table, col_to_stype in col_to_stype_dict.items():
-        for col, stype_str in col_to_stype.items():
+        for col, stype_str in col_to_stype.items():#每一张表的每一个列都对应一个stype，col_to_stype是一个字典,col是列名，stype_str是stype的字符串表示
+        # 这里的stype是一个类，stype_str是stype的字符串表示
             col_to_stype[col] = stype(stype_str)
 except FileNotFoundError:
     col_to_stype_dict = get_stype_proposal(dataset.get_db())
@@ -87,7 +88,7 @@ data, col_stats_dict = make_pkey_fkey_graph(
     cache_dir=f"{args.cache_dir}/{args.dataset}/materialized",
 )
 
-num_neighbors = [int(args.num_neighbors // 2**i) for i in range(args.num_layers)]
+num_neighbors = [int(args.num_neighbors // 2**i) for i in range(args.num_layers)]# 每层采样的邻居数量指数递减
 
 train_table_input = get_link_train_table_input(task.get_table("train"), task)
 train_loader = LinkNeighborLoader(
@@ -107,7 +108,7 @@ train_loader = LinkNeighborLoader(
 )
 
 eval_loaders_dict: Dict[str, Tuple[NeighborLoader, NeighborLoader]] = {}
-for split in ["val", "test"]:
+for split in ["val", "test"]:# 定义验证集和测试集的邻居采样器
     timestamp = dataset.val_timestamp if split == "val" else dataset.test_timestamp
     seed_time = int(timestamp.timestamp())
     target_table = task.get_table(split)
@@ -167,7 +168,7 @@ def train() -> float:
         x_src = model(src_batch, task.src_entity_table)
         x_pos_dst = model(batch_pos_dst, task.dst_entity_table)
         x_neg_dst = model(batch_neg_dst, task.dst_entity_table)
-
+        #计算模型的源节点和目标节点的嵌入，最大化正样本的分数，最小化负样本的分数
         # [batch_size, ]
         pos_score = torch.sum(x_src * x_pos_dst, dim=1)
         if args.share_same_time:

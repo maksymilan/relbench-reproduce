@@ -29,7 +29,7 @@ class Model(torch.nn.Module):
     ):
         super().__init__()
 
-        self.encoder = HeteroEncoder(
+        self.encoder = HeteroEncoder(#定义对不同类型节点的编码器（这里使用的是resnet）
             channels=channels,
             node_to_col_names_dict={
                 node_type: data[node_type].tf.col_names_dict
@@ -84,16 +84,16 @@ class Model(torch.nn.Module):
         entity_table: NodeType,
     ) -> Tensor:
         seed_time = batch[entity_table].seed_time
-        x_dict = self.encoder(batch.tf_dict)
+        x_dict = self.encoder(batch.tf_dict)#将数据传入编码器进行编码
 
         rel_time_dict = self.temporal_encoder(
             seed_time, batch.time_dict, batch.batch_dict
         )
 
-        for node_type, rel_time in rel_time_dict.items():
+        for node_type, rel_time in rel_time_dict.items():#给每一个transaction节点添加时间信息
             x_dict[node_type] = x_dict[node_type] + rel_time
 
-        for node_type, embedding in self.embedding_dict.items():
+        for node_type, embedding in self.embedding_dict.items():#给每一个article节点添加身份信息
             x_dict[node_type] = x_dict[node_type] + embedding(batch[node_type].n_id)
 
         x_dict = self.gnn(
