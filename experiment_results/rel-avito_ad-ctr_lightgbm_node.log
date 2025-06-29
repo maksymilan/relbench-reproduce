@@ -1,0 +1,50 @@
+Loading Database object from /home/dengmiao/.cache/relbench/rel-avito/db...
+Done in 5.81 seconds.
+Embedding raw data in mini-batch:   0%|          | 0/20 [00:00<?, ?it/s]Embedding raw data in mini-batch:   5%|▌         | 1/20 [00:01<00:19,  1.03s/it]Embedding raw data in mini-batch:  80%|████████  | 16/20 [00:01<00:00, 18.99it/s]Embedding raw data in mini-batch: 100%|██████████| 20/20 [00:01<00:00, 17.10it/s]
+Embedding raw data in mini-batch:   0%|          | 0/7 [00:00<?, ?it/s]Embedding raw data in mini-batch: 100%|██████████| 7/7 [00:00<00:00, 126.72it/s]
+Embedding raw data in mini-batch:   0%|          | 0/8 [00:00<?, ?it/s]Embedding raw data in mini-batch: 100%|██████████| 8/8 [00:00<00:00, 156.15it/s]
+[I 2025-06-29 01:41:17,694] A new study created in memory with name: no-name-c0f72d62-b0db-4e5e-a600-5d6344b7e8ce
+[I 2025-06-29 01:41:29,659] Trial 0 finished with value: 0.037352384805122894 and parameters: {'max_depth': 7, 'learning_rate': 0.051072252718793856, 'num_leaves': 942, 'subsample': 0.8011669385078006, 'colsample_bytree': 0.25934933307911306, 'lambda_l1': 0.0028534701391584724, 'lambda_l2': 1.978747392153215e-09, 'min_data_in_leaf': 94}. Best is trial 0 with value: 0.037352384805122894.
+[LightGBM] [Fatal] Reducing `min_data_in_leaf` with `feature_pre_filter=true` may cause unexpected behaviour for features that were pre-filtered by the larger `min_data_in_leaf`.
+You need to set `feature_pre_filter=false` to dynamically change the `min_data_in_leaf`.
+[LightGBM] [Fatal] Reducing `min_data_in_leaf` with `feature_pre_filter=true` may cause unexpected behaviour for features that were pre-filtered by the larger `min_data_in_leaf`.
+You need to set `feature_pre_filter=false` to dynamically change the `min_data_in_leaf`.
+[I 2025-06-29 01:41:41,410] Trial 1 finished with value: 0.03726842711503964 and parameters: {'max_depth': 8, 'learning_rate': 0.06437899643042162, 'num_leaves': 722, 'subsample': 0.8638556488630678, 'colsample_bytree': 0.5089271948647605, 'lambda_l1': 2.896952022401836, 'lambda_l2': 6.290394516339242e-05, 'min_data_in_leaf': 37}. Best is trial 1 with value: 0.03726842711503964.
+[LightGBM] [Fatal] Reducing `min_data_in_leaf` with `feature_pre_filter=true` may cause unexpected behaviour for features that were pre-filtered by the larger `min_data_in_leaf`.
+You need to set `feature_pre_filter=false` to dynamically change the `min_data_in_leaf`.
+[LightGBM] [Fatal] Reducing `min_data_in_leaf` with `feature_pre_filter=true` may cause unexpected behaviour for features that were pre-filtered by the larger `min_data_in_leaf`.
+You need to set `feature_pre_filter=false` to dynamically change the `min_data_in_leaf`.
+[I 2025-06-29 01:41:57,137] Trial 2 finished with value: 0.03859348692317367 and parameters: {'max_depth': 3, 'learning_rate': 0.0019369693356946674, 'num_leaves': 671, 'subsample': 0.4479402968744133, 'colsample_bytree': 0.8780326008486845, 'lambda_l1': 6.687059705001543e-06, 'lambda_l2': 0.03656551593973004, 'min_data_in_leaf': 24}. Best is trial 1 with value: 0.03726842711503964.
+[LightGBM] [Fatal] Reducing `min_data_in_leaf` with `feature_pre_filter=true` may cause unexpected behaviour for features that were pre-filtered by the larger `min_data_in_leaf`.
+You need to set `feature_pre_filter=false` to dynamically change the `min_data_in_leaf`.
+[LightGBM] [Fatal] Reducing `min_data_in_leaf` with `feature_pre_filter=true` may cause unexpected behaviour for features that were pre-filtered by the larger `min_data_in_leaf`.
+You need to set `feature_pre_filter=false` to dynamically change the `min_data_in_leaf`.
+[I 2025-06-29 01:42:35,426] Trial 3 finished with value: 0.03782961124230779 and parameters: {'max_depth': 5, 'learning_rate': 0.002800024886757548, 'num_leaves': 984, 'subsample': 0.7692007494625979, 'colsample_bytree': 0.7033191978870127, 'lambda_l1': 0.018525900757069242, 'lambda_l2': 3.5986739419989586, 'min_data_in_leaf': 23}. Best is trial 1 with value: 0.03726842711503964.
+[LightGBM] [Fatal] Reducing `min_data_in_leaf` with `feature_pre_filter=true` may cause unexpected behaviour for features that were pre-filtered by the larger `min_data_in_leaf`.
+You need to set `feature_pre_filter=false` to dynamically change the `min_data_in_leaf`.
+[LightGBM] [Fatal] Reducing `min_data_in_leaf` with `feature_pre_filter=true` may cause unexpected behaviour for features that were pre-filtered by the larger `min_data_in_leaf`.
+You need to set `feature_pre_filter=false` to dynamically change the `min_data_in_leaf`.
+[I 2025-06-29 01:42:47,823] Trial 4 finished with value: 0.03778266307844114 and parameters: {'max_depth': 4, 'learning_rate': 0.011616945804538316, 'num_leaves': 810, 'subsample': 0.5091082001410678, 'colsample_bytree': 0.4730634335459894, 'lambda_l1': 1.9070418746711916e-07, 'lambda_l2': 1.6238870741773432e-08, 'min_data_in_leaf': 12}. Best is trial 1 with value: 0.03726842711503964.
+[I 2025-06-29 01:42:48,620] Trial 5 finished with value: 0.037870956932055375 and parameters: {'max_depth': 7, 'learning_rate': 0.06225353544973446, 'num_leaves': 34, 'subsample': 0.16236818059842426, 'colsample_bytree': 0.05710164369214131, 'lambda_l1': 1.528031193338464e-07, 'lambda_l2': 0.0004221062868312365, 'min_data_in_leaf': 28}. Best is trial 1 with value: 0.03726842711503964.
+[I 2025-06-29 01:42:56,376] Trial 6 finished with value: 0.03754172131955673 and parameters: {'max_depth': 6, 'learning_rate': 0.045618803723941115, 'num_leaves': 689, 'subsample': 0.34198617900876216, 'colsample_bytree': 0.7142483801449685, 'lambda_l1': 0.024933786436766525, 'lambda_l2': 3.5296289907003178e-09, 'min_data_in_leaf': 46}. Best is trial 1 with value: 0.03726842711503964.
+[I 2025-06-29 01:43:09,380] Trial 7 finished with value: 0.03776786754490943 and parameters: {'max_depth': 3, 'learning_rate': 0.02946110418446842, 'num_leaves': 971, 'subsample': 0.768587571825537, 'colsample_bytree': 0.7247975992185068, 'lambda_l1': 0.00020309451255976326, 'lambda_l2': 3.241984097998294e-05, 'min_data_in_leaf': 60}. Best is trial 1 with value: 0.03726842711503964.
+[I 2025-06-29 01:43:13,661] Trial 8 finished with value: 0.03836272849641244 and parameters: {'max_depth': 9, 'learning_rate': 0.01376772294571816, 'num_leaves': 767, 'subsample': 0.07738949525670576, 'colsample_bytree': 0.3140259105112953, 'lambda_l1': 8.236662066065883e-08, 'lambda_l2': 0.8751484850819925, 'min_data_in_leaf': 12}. Best is trial 1 with value: 0.03726842711503964.
+[I 2025-06-29 01:43:15,409] Trial 9 finished with value: 0.03829198046685083 and parameters: {'max_depth': 7, 'learning_rate': 0.02251621927058847, 'num_leaves': 807, 'subsample': 0.11525366777065758, 'colsample_bytree': 0.25948031364397767, 'lambda_l1': 3.54980263841142e-07, 'lambda_l2': 1.475904267568442e-06, 'min_data_in_leaf': 84}. Best is trial 1 with value: 0.03726842711503964.
+[2000]	valid_0's l1: 0.0385935
+[2000]	valid_0's l1: 0.0378296
+Traceback (most recent call last):
+  File "/home/dengmiao/relbench/examples/lightgbm_node.py", line 137, in <module>
+    train_metrics = task.evaluate(pred, train_table)
+  File "/home/dengmiao/miniconda3/envs/relbench/lib/python3.10/site-packages/relbench/base/task_entity.py", line 63, in evaluate
+    return {fn.__name__: fn(target, pred) for fn in metrics}
+  File "/home/dengmiao/miniconda3/envs/relbench/lib/python3.10/site-packages/relbench/base/task_entity.py", line 63, in <dictcomp>
+    return {fn.__name__: fn(target, pred) for fn in metrics}
+  File "/home/dengmiao/miniconda3/envs/relbench/lib/python3.10/site-packages/relbench/metrics.py", line 80, in rmse
+    return skm.mean_squared_error(true, pred, squared=False)
+  File "/home/dengmiao/miniconda3/envs/relbench/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 194, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/home/dengmiao/miniconda3/envs/relbench/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/home/dengmiao/miniconda3/envs/relbench/lib/python3.10/inspect.py", line 3175, in _bind
+    raise TypeError(
+TypeError: got an unexpected keyword argument 'squared'

@@ -1,0 +1,8 @@
+random:
+Train: {'average_precision': 0.03806085551207046, 'accuracy': 0.4977293369663942, 'f1': 0.0683846009858364, 'roc_auc': 0.48898605197972844}
+Val: {'average_precision': 0.03627128821171529, 'accuracy': 0.5001180191663126, 'f1': 0.06713064928200159, 'roc_auc': 0.5096073835354725}
+Test: {'average_precision': 0.014744462093403136, 'accuracy': 0.4997291440953413, 'f1': 0.028563336974551927, 'roc_auc': 0.48501282834383397}
+majority:
+Train: {'average_precision': 0.038719009654522824, 'accuracy': 0.9612809903454772, 'f1': 0.0, 'roc_auc': 0.5}
+Val: {'average_precision': 0.03516971156115753, 'accuracy': 0.9648302884388424, 'f1': 0.0, 'roc_auc': 0.5}
+Test: {'average_precision': 0.015417951495957996, 'accuracy': 0.984582048504042, 'f1': 0.0, 'roc_auc': 0.5}

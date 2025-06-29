@@ -1,0 +1,8 @@
+past_visit:
+Train: {'link_prediction_precision': 0.012232280102476515, 'link_prediction_recall': 1.0, 'link_prediction_map': 0.9715125195879407}
+Val: {'link_prediction_precision': 0.0, 'link_prediction_recall': 0.0, 'link_prediction_map': 0.0}
+Test: {'link_prediction_precision': 0.0001937984496124031, 'link_prediction_recall': 0.01744186046511628, 'link_prediction_map': 0.01744186046511628}
+global_popularity:
+Train: {'link_prediction_precision': 0.0020392826643894106, 'link_prediction_recall': 0.1703231534572269, 'link_prediction_map': 0.020882571944254674}
+Val: {'link_prediction_precision': 0.001017699115044248, 'link_prediction_recall': 0.08112094395280237, 'link_prediction_map': 0.0047046867329586465}
+Test: {'link_prediction_precision': 0.0010852713178294575, 'link_prediction_recall': 0.07762704565030147, 'link_prediction_map': 0.014601326801019839}

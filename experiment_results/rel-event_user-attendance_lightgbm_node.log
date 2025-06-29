@@ -1,0 +1,39 @@
+Loading Database object from /home/dengmiao/.cache/relbench/rel-event/db...
+Done in 3.87 seconds.
+Embedding raw data in mini-batch:   0%|          | 0/76 [00:00<?, ?it/s]Embedding raw data in mini-batch:  18%|█▊        | 14/76 [00:00<00:00, 135.52it/s]Embedding raw data in mini-batch:  53%|█████▎    | 40/76 [00:00<00:00, 205.91it/s]Embedding raw data in mini-batch:  87%|████████▋ | 66/76 [00:00<00:00, 228.43it/s]Embedding raw data in mini-batch: 100%|██████████| 76/76 [00:00<00:00, 221.40it/s]
+Embedding raw data in mini-batch:   0%|          | 0/76 [00:00<?, ?it/s]Embedding raw data in mini-batch:   1%|▏         | 1/76 [00:00<00:40,  1.87it/s]Embedding raw data in mini-batch:  26%|██▋       | 20/76 [00:00<00:01, 41.22it/s]Embedding raw data in mini-batch:  54%|█████▍    | 41/76 [00:00<00:00, 79.27it/s]Embedding raw data in mini-batch:  82%|████████▏ | 62/76 [00:00<00:00, 110.55it/s]Embedding raw data in mini-batch: 100%|██████████| 76/76 [00:00<00:00, 83.49it/s] 
+Embedding raw data in mini-batch:   0%|          | 0/8 [00:00<?, ?it/s]Embedding raw data in mini-batch: 100%|██████████| 8/8 [00:00<00:00, 255.54it/s]
+Embedding raw data in mini-batch:   0%|          | 0/8 [00:00<?, ?it/s]Embedding raw data in mini-batch: 100%|██████████| 8/8 [00:00<00:00, 198.15it/s]
+Embedding raw data in mini-batch:   0%|          | 0/8 [00:00<?, ?it/s]Embedding raw data in mini-batch: 100%|██████████| 8/8 [00:00<00:00, 266.01it/s]
+Embedding raw data in mini-batch:   0%|          | 0/8 [00:00<?, ?it/s]Embedding raw data in mini-batch: 100%|██████████| 8/8 [00:00<00:00, 189.40it/s]
+[I 2025-06-28 23:43:38,384] A new study created in memory with name: no-name-9c00a479-fa18-41a5-86dc-feded62d5505
+[I 2025-06-28 23:43:41,026] Trial 0 finished with value: 0.26179831097863887 and parameters: {'max_depth': 4, 'learning_rate': 0.006784603791729537, 'num_leaves': 881, 'subsample': 0.613128646140636, 'colsample_bytree': 0.3856667610617108, 'lambda_l1': 5.006605089529297, 'lambda_l2': 1.4166111924958589e-05, 'min_data_in_leaf': 89}. Best is trial 0 with value: 0.26179831097863887.
+[I 2025-06-28 23:43:43,278] Trial 1 finished with value: 0.26190300831478996 and parameters: {'max_depth': 10, 'learning_rate': 0.019159612515658855, 'num_leaves': 489, 'subsample': 0.9635058712921998, 'colsample_bytree': 0.5002899217199298, 'lambda_l1': 0.38229980311166073, 'lambda_l2': 0.27168988408437456, 'min_data_in_leaf': 97}. Best is trial 0 with value: 0.26179831097863887.
+[LightGBM] [Fatal] Reducing `min_data_in_leaf` with `feature_pre_filter=true` may cause unexpected behaviour for features that were pre-filtered by the larger `min_data_in_leaf`.
+You need to set `feature_pre_filter=false` to dynamically change the `min_data_in_leaf`.
+[LightGBM] [Fatal] Reducing `min_data_in_leaf` with `feature_pre_filter=true` may cause unexpected behaviour for features that were pre-filtered by the larger `min_data_in_leaf`.
+You need to set `feature_pre_filter=false` to dynamically change the `min_data_in_leaf`.
+[I 2025-06-28 23:43:45,765] Trial 2 finished with value: 0.261796265487643 and parameters: {'max_depth': 3, 'learning_rate': 0.002825078874641938, 'num_leaves': 445, 'subsample': 0.7861689804996432, 'colsample_bytree': 0.43594826197211817, 'lambda_l1': 6.17525806773386e-09, 'lambda_l2': 0.000722344841558161, 'min_data_in_leaf': 2}. Best is trial 2 with value: 0.261796265487643.
+[I 2025-06-28 23:43:46,540] Trial 3 finished with value: 0.26181277125421654 and parameters: {'max_depth': 4, 'learning_rate': 0.029108534737936564, 'num_leaves': 422, 'subsample': 0.4450876578345894, 'colsample_bytree': 0.7749898568500909, 'lambda_l1': 0.0059341930337733564, 'lambda_l2': 0.7381617490684134, 'min_data_in_leaf': 81}. Best is trial 2 with value: 0.261796265487643.
+[I 2025-06-28 23:43:47,293] Trial 4 finished with value: 0.26179831097863887 and parameters: {'max_depth': 3, 'learning_rate': 0.030132800769713794, 'num_leaves': 593, 'subsample': 0.8866668409145559, 'colsample_bytree': 0.10511928164161295, 'lambda_l1': 8.393940681124293e-05, 'lambda_l2': 3.7210586980417855e-06, 'min_data_in_leaf': 42}. Best is trial 2 with value: 0.261796265487643.
+[I 2025-06-28 23:43:48,187] Trial 5 finished with value: 0.26179360447045263 and parameters: {'max_depth': 3, 'learning_rate': 0.0047371004894383425, 'num_leaves': 846, 'subsample': 0.882844997224272, 'colsample_bytree': 0.09985122930656753, 'lambda_l1': 1.7753552569957146e-06, 'lambda_l2': 7.263749219608671e-08, 'min_data_in_leaf': 12}. Best is trial 5 with value: 0.26179360447045263.
+[I 2025-06-28 23:43:49,737] Trial 6 finished with value: 0.2620632186691147 and parameters: {'max_depth': 8, 'learning_rate': 0.017775306030925943, 'num_leaves': 18, 'subsample': 0.40177492856225333, 'colsample_bytree': 0.8657787782755986, 'lambda_l1': 1.618118062875025e-08, 'lambda_l2': 0.00010770238916424596, 'min_data_in_leaf': 18}. Best is trial 5 with value: 0.26179360447045263.
+[I 2025-06-28 23:43:51,546] Trial 7 finished with value: 0.2621695718331561 and parameters: {'max_depth': 8, 'learning_rate': 0.053382007153091465, 'num_leaves': 92, 'subsample': 0.9756521365620467, 'colsample_bytree': 0.45126385043532496, 'lambda_l1': 1.1414491924041857e-09, 'lambda_l2': 0.00010670983349626368, 'min_data_in_leaf': 73}. Best is trial 5 with value: 0.26179360447045263.
+[I 2025-06-28 23:43:53,375] Trial 8 finished with value: 0.26179831097863887 and parameters: {'max_depth': 7, 'learning_rate': 0.00702362950359532, 'num_leaves': 541, 'subsample': 0.5849009727164237, 'colsample_bytree': 0.48649292747213463, 'lambda_l1': 7.75322201243111e-05, 'lambda_l2': 0.0030324775860810236, 'min_data_in_leaf': 43}. Best is trial 5 with value: 0.26179360447045263.
+[I 2025-06-28 23:43:56,468] Trial 9 finished with value: 0.26180944477640217 and parameters: {'max_depth': 9, 'learning_rate': 0.0020374849906834662, 'num_leaves': 936, 'subsample': 0.742658859732859, 'colsample_bytree': 0.8700397680624613, 'lambda_l1': 1.0485991265062122e-09, 'lambda_l2': 0.5201640130375652, 'min_data_in_leaf': 60}. Best is trial 5 with value: 0.26179360447045263.
+Traceback (most recent call last):
+  File "/home/dengmiao/relbench/examples/lightgbm_node.py", line 137, in <module>
+    train_metrics = task.evaluate(pred, train_table)
+  File "/home/dengmiao/miniconda3/envs/relbench/lib/python3.10/site-packages/relbench/base/task_entity.py", line 63, in evaluate
+    return {fn.__name__: fn(target, pred) for fn in metrics}
+  File "/home/dengmiao/miniconda3/envs/relbench/lib/python3.10/site-packages/relbench/base/task_entity.py", line 63, in <dictcomp>
+    return {fn.__name__: fn(target, pred) for fn in metrics}
+  File "/home/dengmiao/miniconda3/envs/relbench/lib/python3.10/site-packages/relbench/metrics.py", line 80, in rmse
+    return skm.mean_squared_error(true, pred, squared=False)
+  File "/home/dengmiao/miniconda3/envs/relbench/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 194, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/home/dengmiao/miniconda3/envs/relbench/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/home/dengmiao/miniconda3/envs/relbench/lib/python3.10/inspect.py", line 3175, in _bind
+    raise TypeError(
+TypeError: got an unexpected keyword argument 'squared'

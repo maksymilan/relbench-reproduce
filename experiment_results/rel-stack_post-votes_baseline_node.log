@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "/home/dengmiao/relbench/examples/baseline_node.py", line 89, in <module>
+    train_metrics = evaluate(train_table, train_table, name=name)
+  File "/home/dengmiao/relbench/examples/baseline_node.py", line 68, in evaluate
+    return task.evaluate(pred, None if is_test else pred_table)
+  File "/home/dengmiao/miniconda3/envs/relbench/lib/python3.10/site-packages/relbench/base/task_entity.py", line 63, in evaluate
+    return {fn.__name__: fn(target, pred) for fn in metrics}
+  File "/home/dengmiao/miniconda3/envs/relbench/lib/python3.10/site-packages/relbench/base/task_entity.py", line 63, in <dictcomp>
+    return {fn.__name__: fn(target, pred) for fn in metrics}
+  File "/home/dengmiao/miniconda3/envs/relbench/lib/python3.10/site-packages/relbench/metrics.py", line 80, in rmse
+    return skm.mean_squared_error(true, pred, squared=False)
+  File "/home/dengmiao/miniconda3/envs/relbench/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 194, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "/home/dengmiao/miniconda3/envs/relbench/lib/python3.10/inspect.py", line 3186, in bind
+    return self._bind(args, kwargs)
+  File "/home/dengmiao/miniconda3/envs/relbench/lib/python3.10/inspect.py", line 3175, in _bind
+    raise TypeError(
+TypeError: got an unexpected keyword argument 'squared'
