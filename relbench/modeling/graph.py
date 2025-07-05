@@ -40,6 +40,7 @@ def make_pkey_fkey_graph(
         HeteroData: The heterogeneous :class:`PyG` object with
             :class:`TensorFrame` feature.
     """
+    print("Constructing heterogeneous graph with primary-foreign key relationships...")
     data = HeteroData()
     col_stats_dict = dict()
     if cache_dir is not None:

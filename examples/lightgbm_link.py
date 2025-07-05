@@ -355,9 +355,9 @@ train_dataset = torch_frame.data.Dataset(
 train_dataset = train_dataset.materialize()
 
 tf_train = train_dataset.tensor_frame
-tf_val = train_dataset.convert_to_tensor_frame(dfs["val"])
-tf_val_pred = train_dataset.convert_to_tensor_frame(dfs["val_pred"])
-tf_test = train_dataset.convert_to_tensor_frame(dfs["test"])
+tf_val = train_dataset.convert_to_tensor_frame(dfs["val"],device="cpu")
+tf_val_pred = train_dataset.convert_to_tensor_frame(dfs["val_pred"],device="cpu")
+tf_test = train_dataset.convert_to_tensor_frame(dfs["test"],device="cpu")
 
 # tune metric for binary classification problem
 tune_metric = Metric.ROCAUC
