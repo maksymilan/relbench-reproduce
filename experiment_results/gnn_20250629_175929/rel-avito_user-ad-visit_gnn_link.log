@@ -1,0 +1,30 @@
+Unzipping contents of '/home/dengyan/.cache/relbench/rel-avito/tasks/user-ad-visit.zip' to '/home/dengyan/.cache/relbench/rel-avito/tasks/.'
+/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch_frame/utils/io.py:113: UserWarning: Weights only load failed. Please file an issue to make `torch.load(weights_only=True)` compatible in your case. Please use `torch.serialization.add_safe_globals([scalar])` to allowlist this global.
+  warnings.warn(f"{warn_msg} Please use "
+/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch_frame/utils/io.py:113: UserWarning: Weights only load failed. Please file an issue to make `torch.load(weights_only=True)` compatible in your case. Please use `torch.serialization.add_safe_globals([scalar])` to allowlist this global.
+  warnings.warn(f"{warn_msg} Please use "
+/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch_frame/utils/io.py:113: UserWarning: Weights only load failed. Please file an issue to make `torch.load(weights_only=True)` compatible in your case. Please use `torch.serialization.add_safe_globals([scalar])` to allowlist this global.
+  warnings.warn(f"{warn_msg} Please use "
+/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch_frame/utils/io.py:113: UserWarning: Weights only load failed. Please file an issue to make `torch.load(weights_only=True)` compatible in your case. Please use `torch.serialization.add_safe_globals([scalar])` to allowlist this global.
+  warnings.warn(f"{warn_msg} Please use "
+/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/relbench/modeling/graph.py:217: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at ../aten/src/ATen/SparseCsrTensorImpl.cpp:53.)
+  dst_node_indices = sparse_coo.to_sparse_csr()
+Loading Database object from /home/dengyan/.cache/relbench/rel-avito/db...
+Done in 3.41 seconds.
+Loading Database object from /home/dengyan/.cache/relbench/rel-avito/db...
+Done in 4.39 seconds.
+  0%|          | 0/168 [00:00<?, ?it/s]  0%|          | 0/168 [00:01<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/dengyan/relbench-reproduce/examples/gnn_link.py", line 232, in <module>
+    train_loss = train()
+  File "/home/dengyan/relbench-reproduce/examples/gnn_link.py", line 187, in train
+    optimizer.step()
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/optim/optimizer.py", line 484, in wrapper
+    out = func(*args, **kwargs)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/optim/optimizer.py", line 89, in _use_grad
+    ret = func(self, *args, **kwargs)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/optim/adam.py", line 216, in step
+    has_complex = self._init_group(
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/optim/adam.py", line 160, in _init_group
+    state["exp_avg_sq"] = torch.zeros_like(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.84 GiB. GPU 0 has a total capacity of 23.70 GiB of which 2.32 GiB is free. Including non-PyTorch memory, this process has 21.38 GiB memory in use. Of the allocated memory 18.20 GiB is allocated by PyTorch, and 2.02 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

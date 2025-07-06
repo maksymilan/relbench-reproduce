@@ -1,0 +1,64 @@
+Unzipping contents of '/home/dengyan/.cache/relbench/rel-event/tasks/user-repeat.zip' to '/home/dengyan/.cache/relbench/rel-event/tasks/.'
+/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch_frame/utils/io.py:113: UserWarning: Weights only load failed. Please file an issue to make `torch.load(weights_only=True)` compatible in your case. Please use `torch.serialization.add_safe_globals([scalar])` to allowlist this global.
+  warnings.warn(f"{warn_msg} Please use "
+/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch_frame/utils/io.py:113: UserWarning: Weights only load failed. Please file an issue to make `torch.load(weights_only=True)` compatible in your case. Please use `torch.serialization.add_safe_globals([scalar])` to allowlist this global.
+  warnings.warn(f"{warn_msg} Please use "
+/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch_frame/utils/io.py:113: UserWarning: Weights only load failed. Please file an issue to make `torch.load(weights_only=True)` compatible in your case. Please use `torch.serialization.add_safe_globals([scalar])` to allowlist this global.
+  warnings.warn(f"{warn_msg} Please use "
+/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch_frame/utils/io.py:113: UserWarning: Weights only load failed. Please file an issue to make `torch.load(weights_only=True)` compatible in your case. Please use `torch.serialization.add_safe_globals([scalar])` to allowlist this global.
+  warnings.warn(f"{warn_msg} Please use "
+Loading Database object from /home/dengyan/.cache/relbench/rel-event/db...
+Done in 2.59 seconds.
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:06,  1.07it/s] 25%|██▌       | 2/8 [00:01<00:02,  2.14it/s] 38%|███▊      | 3/8 [00:01<00:01,  3.19it/s] 50%|█████     | 4/8 [00:01<00:00,  4.16it/s] 62%|██████▎   | 5/8 [00:01<00:00,  5.04it/s] 75%|███████▌  | 6/8 [00:01<00:00,  5.74it/s] 88%|████████▊ | 7/8 [00:01<00:00,  6.24it/s]100%|██████████| 8/8 [00:01<00:00,  4.45it/s]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 15.95it/s]
+Epoch: 01, Train loss: 0.7893167094040017, Val metrics: {'accuracy': 0.5111940298507462, 'average_precision': 0.5390229003525948, 'f1': 0.0, 'roc_auc': 0.5930323299888517}
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:00,  8.05it/s] 25%|██▌       | 2/8 [00:00<00:00,  8.16it/s] 38%|███▊      | 3/8 [00:00<00:00,  8.21it/s] 50%|█████     | 4/8 [00:00<00:00,  8.13it/s] 62%|██████▎   | 5/8 [00:00<00:00,  8.07it/s] 75%|███████▌  | 6/8 [00:00<00:00,  8.07it/s] 88%|████████▊ | 7/8 [00:00<00:00,  8.18it/s]100%|██████████| 8/8 [00:00<00:00,  8.47it/s]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 18.16it/s]
+Epoch: 02, Train loss: 0.6912947990570386, Val metrics: {'accuracy': 0.582089552238806, 'average_precision': 0.562577416879341, 'f1': 0.6056338028169014, 'roc_auc': 0.6096989966555184}
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:00<00:00,  8.28it/s] 25%|██▌       | 2/8 [00:00<00:00,  8.41it/s] 38%|███▊      | 3/8 [00:00<00:00,  8.25it/s] 50%|█████     | 4/8 [00:00<00:00,  8.07it/s] 62%|██████▎   | 5/8 [00:00<00:00,  8.24it/s] 75%|███████▌  | 6/8 [00:00<00:00,  8.14it/s] 88%|████████▊ | 7/8 [00:00<00:00,  8.08it/s] 88%|████████▊ | 7/8 [00:00<00:00,  7.72it/s]
+Traceback (most recent call last):
+  File "/home/dengyan/relbench-reproduce/examples/gnn_node.py", line 193, in <module>
+    train_loss = train()
+  File "/home/dengyan/relbench-reproduce/examples/gnn_node.py", line 133, in train
+    pred = model(
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dengyan/relbench-reproduce/examples/model.py", line 87, in forward
+    x_dict = self.encoder(batch.tf_dict)#将数据传入编码器进行编码
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/relbench/modeling/nn.py", line 83, in forward
+    x_dict = {
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/relbench/modeling/nn.py", line 84, in <dictcomp>
+    node_type: self.encoders[node_type](tf) for node_type, tf in tf_dict.items()
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch_frame/nn/models/resnet.py", line 202, in forward
+    x = self.backbone(x)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/nn/modules/container.py", line 219, in forward
+    input = module(input)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch_frame/nn/models/resnet.py", line 88, in forward
+    out = self.relu(out)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/nn/modules/activation.py", line 104, in forward
+    return F.relu(input, inplace=self.inplace)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/nn/functional.py", line 1500, in relu
+    result = torch.relu(input)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.00 MiB. GPU 0 has a total capacity of 23.70 GiB of which 704.00 KiB is free. Including non-PyTorch memory, this process has 23.70 GiB memory in use. Of the allocated memory 13.06 GiB is allocated by PyTorch, and 9.47 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

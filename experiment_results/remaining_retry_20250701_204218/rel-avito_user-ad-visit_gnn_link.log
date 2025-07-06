@@ -1,0 +1,23 @@
+/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch_frame/utils/io.py:113: UserWarning: Weights only load failed. Please file an issue to make `torch.load(weights_only=True)` compatible in your case. Please use `torch.serialization.add_safe_globals([scalar])` to allowlist this global.
+  warnings.warn(f"{warn_msg} Please use "
+/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch_frame/utils/io.py:113: UserWarning: Weights only load failed. Please file an issue to make `torch.load(weights_only=True)` compatible in your case. Please use `torch.serialization.add_safe_globals([scalar])` to allowlist this global.
+  warnings.warn(f"{warn_msg} Please use "
+Loading Database object from /home/dengyan/.cache/relbench/rel-avito/db...
+Done in 3.50 seconds.
+Traceback (most recent call last):
+  File "/home/dengyan/relbench-reproduce/examples/gnn_link.py", line 82, in <module>
+    data, col_stats_dict = make_pkey_fkey_graph(
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/relbench/modeling/graph.py", line 71, in make_pkey_fkey_graph
+    dataset = Dataset(
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch_frame/data/dataset.py", line 588, in materialize
+    self._tensor_frame, self._col_stats = torch_frame.load(
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch_frame/utils/io.py", line 121, in load
+    raise e
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch_frame/utils/io.py", line 104, in load
+    tf_dict, col_stats = torch.load(path, weights_only=True)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/serialization.py", line 1096, in load
+    raise pickle.UnpicklingError(_get_wo_message(str(e))) from None
+_pickle.UnpicklingError: Weights only load failed. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+ Please file an issue with the following so that we can make `weights_only=True` compatible with your use case: WeightsUnpickler error: CUDA out of memory. Tried to allocate 6.66 GiB. GPU 0 has a total capacity of 23.70 GiB of which 1002.69 MiB is free. Process 1783751 has 21.91 GiB memory in use. Including non-PyTorch memory, this process has 822.00 MiB memory in use. Of the allocated memory 0 bytes is allocated by PyTorch, and 0 bytes is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.

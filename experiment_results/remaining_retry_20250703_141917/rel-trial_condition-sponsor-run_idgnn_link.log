@@ -1,0 +1,69 @@
+/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch_frame/utils/io.py:113: UserWarning: Weights only load failed. Please file an issue to make `torch.load(weights_only=True)` compatible in your case. Please use `torch.serialization.add_safe_globals([scalar])` to allowlist this global.
+  warnings.warn(f"{warn_msg} Please use "
+/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch_frame/utils/io.py:113: UserWarning: Weights only load failed. Please file an issue to make `torch.load(weights_only=True)` compatible in your case. Please use `torch.serialization.add_safe_globals([scalar])` to allowlist this global.
+  warnings.warn(f"{warn_msg} Please use "
+/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch_frame/utils/io.py:113: UserWarning: Weights only load failed. Please file an issue to make `torch.load(weights_only=True)` compatible in your case. Please use `torch.serialization.add_safe_globals([scalar])` to allowlist this global.
+  warnings.warn(f"{warn_msg} Please use "
+/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch_frame/utils/io.py:113: UserWarning: Weights only load failed. Please file an issue to make `torch.load(weights_only=True)` compatible in your case. Please use `torch.serialization.add_safe_globals([scalar])` to allowlist this global.
+  warnings.warn(f"{warn_msg} Please use "
+/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch_frame/utils/io.py:113: UserWarning: Weights only load failed. Please file an issue to make `torch.load(weights_only=True)` compatible in your case. Please use `torch.serialization.add_safe_globals([scalar])` to allowlist this global.
+  warnings.warn(f"{warn_msg} Please use "
+/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch_frame/utils/io.py:113: UserWarning: Weights only load failed. Please file an issue to make `torch.load(weights_only=True)` compatible in your case. Please use `torch.serialization.add_safe_globals([scalar])` to allowlist this global.
+  warnings.warn(f"{warn_msg} Please use "
+/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch_frame/utils/io.py:113: UserWarning: Weights only load failed. Please file an issue to make `torch.load(weights_only=True)` compatible in your case. Please use `torch.serialization.add_safe_globals([scalar])` to allowlist this global.
+  warnings.warn(f"{warn_msg} Please use "
+/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch_frame/utils/io.py:113: UserWarning: Weights only load failed. Please file an issue to make `torch.load(weights_only=True)` compatible in your case. Please use `torch.serialization.add_safe_globals([scalar])` to allowlist this global.
+  warnings.warn(f"{warn_msg} Please use "
+/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch_frame/utils/io.py:113: UserWarning: Weights only load failed. Please file an issue to make `torch.load(weights_only=True)` compatible in your case. Please use `torch.serialization.add_safe_globals([scalar])` to allowlist this global.
+  warnings.warn(f"{warn_msg} Please use "
+/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch_frame/utils/io.py:113: UserWarning: Weights only load failed. Please file an issue to make `torch.load(weights_only=True)` compatible in your case. Please use `torch.serialization.add_safe_globals([scalar])` to allowlist this global.
+  warnings.warn(f"{warn_msg} Please use "
+/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch_frame/utils/io.py:113: UserWarning: Weights only load failed. Please file an issue to make `torch.load(weights_only=True)` compatible in your case. Please use `torch.serialization.add_safe_globals([scalar])` to allowlist this global.
+  warnings.warn(f"{warn_msg} Please use "
+/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/relbench/modeling/graph.py:217: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at ../aten/src/ATen/SparseCsrTensorImpl.cpp:53.)
+  dst_node_indices = sparse_coo.to_sparse_csr()
+Loading Database object from /home/dengyan/.cache/relbench/rel-trial/db...
+Done in 6.15 seconds.
+Loading Database object from /home/dengyan/.cache/relbench/rel-trial/db...
+Done in 5.88 seconds.
+  0%|          | 0/73 [00:00<?, ?it/s]  0%|          | 0/73 [00:01<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/dengyan/relbench-reproduce/examples/idgnn_link.py", line 197, in <module>
+    train_loss = train()
+  File "/home/dengyan/relbench-reproduce/examples/idgnn_link.py", line 127, in train
+    out = model.forward_dst_readout(
+  File "/home/dengyan/relbench-reproduce/examples/model.py", line 119, in forward_dst_readout
+    x_dict = self.encoder(batch.tf_dict)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/relbench/modeling/nn.py", line 83, in forward
+    x_dict = {
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/relbench/modeling/nn.py", line 84, in <dictcomp>
+    node_type: self.encoders[node_type](tf) for node_type, tf in tf_dict.items()
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch_frame/nn/models/resnet.py", line 202, in forward
+    x = self.backbone(x)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/nn/modules/container.py", line 219, in forward
+    input = module(input)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch_frame/nn/models/resnet.py", line 86, in forward
+    out = self.lin2(out)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/nn/modules/linear.py", line 117, in forward
+    return F.linear(input, self.weight, self.bias)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.00 MiB. GPU 0 has a total capacity of 23.70 GiB of which 704.00 KiB is free. Process 2626974 has 3.41 GiB memory in use. Including non-PyTorch memory, this process has 20.29 GiB memory in use. Of the allocated memory 18.92 GiB is allocated by PyTorch, and 218.45 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

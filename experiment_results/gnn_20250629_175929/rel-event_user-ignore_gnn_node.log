@@ -1,0 +1,48 @@
+Unzipping contents of '/home/dengyan/.cache/relbench/rel-event/tasks/user-ignore.zip' to '/home/dengyan/.cache/relbench/rel-event/tasks/.'
+/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch_frame/utils/io.py:113: UserWarning: Weights only load failed. Please file an issue to make `torch.load(weights_only=True)` compatible in your case. Please use `torch.serialization.add_safe_globals([scalar])` to allowlist this global.
+  warnings.warn(f"{warn_msg} Please use "
+/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch_frame/utils/io.py:113: UserWarning: Weights only load failed. Please file an issue to make `torch.load(weights_only=True)` compatible in your case. Please use `torch.serialization.add_safe_globals([scalar])` to allowlist this global.
+  warnings.warn(f"{warn_msg} Please use "
+/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch_frame/utils/io.py:113: UserWarning: Weights only load failed. Please file an issue to make `torch.load(weights_only=True)` compatible in your case. Please use `torch.serialization.add_safe_globals([scalar])` to allowlist this global.
+  warnings.warn(f"{warn_msg} Please use "
+/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch_frame/utils/io.py:113: UserWarning: Weights only load failed. Please file an issue to make `torch.load(weights_only=True)` compatible in your case. Please use `torch.serialization.add_safe_globals([scalar])` to allowlist this global.
+  warnings.warn(f"{warn_msg} Please use "
+Loading Database object from /home/dengyan/.cache/relbench/rel-event/db...
+Done in 1.91 seconds.
+  0%|          | 0/38 [00:00<?, ?it/s]  3%|▎         | 1/38 [00:00<00:31,  1.19it/s]  5%|▌         | 2/38 [00:00<00:15,  2.40it/s]  8%|▊         | 3/38 [00:01<00:09,  3.60it/s] 11%|█         | 4/38 [00:01<00:07,  4.74it/s] 13%|█▎        | 5/38 [00:01<00:05,  5.80it/s] 16%|█▌        | 6/38 [00:01<00:04,  6.71it/s] 18%|█▊        | 7/38 [00:01<00:04,  7.47it/s] 21%|██        | 8/38 [00:01<00:03,  8.05it/s] 26%|██▋       | 10/38 [00:01<00:03,  8.95it/s] 32%|███▏      | 12/38 [00:01<00:02,  9.33it/s] 34%|███▍      | 13/38 [00:02<00:02,  9.42it/s] 37%|███▋      | 14/38 [00:02<00:02,  9.49it/s] 39%|███▉      | 15/38 [00:02<00:02,  9.56it/s] 42%|████▏     | 16/38 [00:02<00:02,  9.57it/s] 45%|████▍     | 17/38 [00:02<00:02,  9.61it/s] 50%|█████     | 19/38 [00:02<00:01,  9.86it/s] 53%|█████▎    | 20/38 [00:02<00:01,  9.81it/s] 55%|█████▌    | 21/38 [00:02<00:01,  9.82it/s] 58%|█████▊    | 22/38 [00:03<00:01,  9.84it/s] 63%|██████▎   | 24/38 [00:03<00:01, 10.03it/s] 66%|██████▌   | 25/38 [00:03<00:01,  9.99it/s] 68%|██████▊   | 26/38 [00:03<00:01,  9.93it/s] 71%|███████   | 27/38 [00:03<00:01,  9.90it/s] 74%|███████▎  | 28/38 [00:03<00:01,  9.91it/s] 76%|███████▋  | 29/38 [00:03<00:00,  9.93it/s] 82%|████████▏ | 31/38 [00:03<00:00, 10.04it/s] 87%|████████▋ | 33/38 [00:04<00:00, 10.04it/s] 92%|█████████▏| 35/38 [00:04<00:00,  9.97it/s] 95%|█████████▍| 36/38 [00:04<00:00,  9.96it/s] 97%|█████████▋| 37/38 [00:04<00:00,  9.97it/s] 97%|█████████▋| 37/38 [00:04<00:00,  8.10it/s]
+Traceback (most recent call last):
+  File "/home/dengyan/relbench-reproduce/examples/gnn_node.py", line 193, in <module>
+    train_loss = train()
+  File "/home/dengyan/relbench-reproduce/examples/gnn_node.py", line 133, in train
+    pred = model(
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dengyan/relbench-reproduce/examples/model.py", line 99, in forward
+    x_dict = self.gnn(
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/relbench/modeling/nn.py", line 169, in forward
+    x_dict = conv(x_dict, edge_index_dict)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch_geometric/nn/conv/hetero_conv.py", line 158, in forward
+    out = conv(*args, **kwargs)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch_geometric/nn/conv/sage_conv.py", line 135, in forward
+    out = self.lin_l(out)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch_geometric/nn/dense/linear.py", line 147, in forward
+    return F.linear(x, self.weight, self.bias)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.00 MiB. GPU 0 has a total capacity of 23.70 GiB of which 704.00 KiB is free. Including non-PyTorch memory, this process has 23.70 GiB memory in use. Of the allocated memory 12.79 GiB is allocated by PyTorch, and 9.74 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

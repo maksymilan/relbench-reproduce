@@ -1,0 +1,12 @@
+/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch_frame/utils/io.py:113: UserWarning: Weights only load failed. Please file an issue to make `torch.load(weights_only=True)` compatible in your case. Please use `torch.serialization.add_safe_globals([scalar])` to allowlist this global.
+  warnings.warn(f"{warn_msg} Please use "
+Loading Database object from /home/dengyan/.cache/relbench/rel-avito/db...
+Done in 4.26 seconds.
+Traceback (most recent call last):
+  File "/home/dengyan/relbench-reproduce/examples/idgnn_link.py", line 73, in <module>
+    data, col_stats_dict = make_pkey_fkey_graph(
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/relbench/modeling/graph.py", line 96, in make_pkey_fkey_graph
+    assert (pkey_index < len(db.table_dict[pkey_table_name])).all()
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/relbench/base/table.py", line 46, in __len__
+    def __len__(self) -> int:
+KeyboardInterrupt

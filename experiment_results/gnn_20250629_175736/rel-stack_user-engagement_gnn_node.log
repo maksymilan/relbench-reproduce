@@ -1,0 +1,52 @@
+Loading Database object from /home/dengyan/.cache/relbench/rel-stack/db...
+Done in 7.65 seconds.
+Traceback (most recent call last):
+  File "/home/dengyan/relbench-reproduce/examples/gnn_node.py", line 74, in <module>
+    text_embedder=GloveTextEmbedding(device=device), batch_size=256
+  File "/home/dengyan/relbench-reproduce/examples/text_embedder.py", line 12, in __init__
+    self.model = SentenceTransformer(
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/sentence_transformers/SentenceTransformer.py", line 302, in __init__
+    if is_sentence_transformer_model(
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/sentence_transformers/util.py", line 1445, in is_sentence_transformer_model
+    load_file_path(
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/sentence_transformers/util.py", line 1485, in load_file_path
+    return hf_hub_download(
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1008, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1071, in _hf_hub_download_to_cache_dir
+    (url_to_download, etag, commit_hash, expected_size, xet_file_data, head_call_error) = _get_metadata_or_catch_error(
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1533, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1450, in get_hf_file_metadata
+    r = _request_wrapper(
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 286, in _request_wrapper
+    response = _request_wrapper(
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 309, in _request_wrapper
+    response = http_backoff(method=method, url=url, **params, retry_on_exceptions=(), retry_on_status_codes=(429,))
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 310, in http_backoff
+    response = session.request(method=method, url=url, **kwargs)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 96, in send
+    return super().send(request, *args, **kwargs)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/urllib3/connection.py", line 753, in connect
+    self.sock = sock = self._new_conn()
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+KeyboardInterrupt
