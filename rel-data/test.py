@@ -21,8 +21,9 @@ def read_parquet_file(file_path: Path) -> pd.DataFrame:
 # 示例用法
 if __name__ == "__main__":
     # 请替换为实际的parquet文件路径
-    file_path = Path("~/.cache/relbench/rel-f1/tasks/driver-dnf/test.parquet")
+    file_path = Path("~/.cache/relbench/rel-amazon/tasks/user-churn/train.parquet")
     df = read_parquet_file(file_path)
     if df is not None:
         print("DataFrame内容:")
+        print(len(df))
         print(df.head())
