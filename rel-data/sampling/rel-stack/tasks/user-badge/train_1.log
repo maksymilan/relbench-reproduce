@@ -1,0 +1,64 @@
+Loading preprocessed graph data from: /home/dengyan/relbench-reproduce/rel-data/sampling/rel-stack/tasks/user-badge/processed/graph_dataset.pt
+Loaded dataset with 2019 graphs
+Data(
+  x=[9, 300],
+  edge_index=[2, 8],
+  node_features=[9],
+  edge_index_by_depth={ 1=[8] },
+  list_index_sequences_by_depth={ 1=[4] },
+  node_timestamps=[9],
+  entity_id=204801
+)
+
+Created a graph map with 2019 entries using key 'UserId'.
+
+Loading tasks from: /home/dengyan/relbench-reproduce/rel-data/sampling/rel-stack/tasks/user-badge/
+Successfully loaded train, val, and test task files.
+
+Creating dataloaders for small graphs
+Train tasks: 2000
+Val tasks: 500
+Test tasks: 500
+Batch size: 4
+
+Creating dataloaders for large graphs
+Train tasks: 2000
+Val tasks: 500
+Test tasks: 500
+Batch size: 4
+
+Model: Model(
+  (unisage): UniSAGE(300, 2)
+)
+Number of parameters: 264834
+
+Training for 10 epochs...
+
+Epoch 1/10
+Training on cuda:2:   0%|          | 0/500 [00:00<?, ?batch/s]Training on cuda:2:   0%|          | 0/500 [00:00<?, ?batch/s]
+Traceback (most recent call last):
+  File "/home/dengyan/SDHyperStructureP/relbench/train_mix.py", line 551, in <module>
+    train_loss_s, primary_loss_s, orthogonal_loss_s = train_model(model, s_train_loader, optimizer, criterion, gpu_device, epoch=epoch)
+  File "/home/dengyan/SDHyperStructureP/relbench/train_mix.py", line 325, in train_model
+    for batch_idx, batch in enumerate(progress_bar):
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 630, in __next__
+    data = self._next_data()
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 673, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 55, in fetch
+    return self.collate_fn(data)
+  File "/home/dengyan/SDHyperStructureP/relbench/train_mix.py", line 140, in custom_collate_safe
+    return custom_collate(batch)
+  File "/home/dengyan/SDHyperStructureP/relbench/train_mix.py", line 95, in custom_collate
+    batch_data = Batch.from_data_list(batch)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch_geometric/data/batch.py", line 97, in from_data_list
+    batch, slice_dict, inc_dict = collate(
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch_geometric/data/collate.py", line 109, in collate
+    value, slices, incs = _collate(attr, values, data_list, stores,
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch_geometric/data/collate.py", line 260, in _collate
+    key, [v[key] for v in values], data_list, stores, increment)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch_geometric/data/collate.py", line 260, in <listcomp>
+    key, [v[key] for v in values], data_list, stores, increment)
+KeyError: 2

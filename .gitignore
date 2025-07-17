@@ -8,3 +8,7 @@ results/
 cache
 *.json
 *.jsonl
+*.parquet
+*.pt
+*.yml
+*.yaml

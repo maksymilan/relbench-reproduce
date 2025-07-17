@@ -1,0 +1,101 @@
+Loading preprocessed graph data from: /home/dengyan/relbench-reproduce/rel-data/sampling/rel-stack/tasks/user-engagement/processed/graph_dataset.pt
+Loaded dataset with 2843 graphs
+Data(
+  x=[23965, 300],
+  edge_index=[2, 23964],
+  node_features=[23965],
+  edge_index_by_depth={
+    1=[463],
+    2=[6950],
+    3=[16551],
+  },
+  list_index_sequences_by_depth={
+    1=[4],
+    2=[317],
+    3=[0],
+  },
+  node_timestamps=[23965],
+  entity_id=4
+)
+
+Created a graph map with 2843 entries using key 'UserId'.
+
+Loading tasks from: /home/dengyan/relbench-reproduce/rel-data/sampling/rel-stack/tasks/user-engagement/
+Successfully loaded train, val, and test task files.
+
+Creating dataloaders for small graphs
+Train tasks: 2000
+Val tasks: 500
+Test tasks: 500
+Batch size: 4
+
+Creating dataloaders for large graphs
+Train tasks: 2000
+Val tasks: 500
+Test tasks: 500
+Batch size: 4
+
+Model: Model(
+  (unisage): UniSAGE(300, 2)
+)
+Number of parameters: 264834
+
+Training for 10 epochs...
+
+Epoch 1/10
+Training on cuda:2:   0%|          | 0/500 [00:00<?, ?batch/s]Training on cuda:2:   0%|          | 1/500 [00:03<25:11,  3.03s/batch]Training on cuda:2:   0%|          | 2/500 [00:03<11:28,  1.38s/batch]Training on cuda:2:   0%|          | 2/500 [00:03<16:07,  1.94s/batch]
+
+============================================================
+DEBUGGING TIME MASK ON THE FIRST BATCH
+Batch contains 4 graphs. Analyzing Graph 0...
+Graph 0 Task Timestamp: 2017-01-05 00:00:00
+--------------------
+Edge Masking at Depth 1:
+  - Original Edges (Graph 0): 2097
+  - Edges After Mask (Graph 0): 1324
+  ✅ SUCCESS: 773 edge(s) were removed.
+Edge Masking at Depth 2:
+  - Original Edges (Graph 0): 16789
+  - Edges After Mask (Graph 0): 10938
+  ✅ SUCCESS: 5851 edge(s) were removed.
+Edge Masking at Depth 3:
+  - Original Edges (Graph 0): 13881
+  - Edges After Mask (Graph 0): 9352
+  ✅ SUCCESS: 4529 edge(s) were removed.
+--------------------
+Sequence Masking at Depth 1:
+  - Original Sequence Nodes (Graph 0): 2089
+  - Sequence Nodes After Mask (Graph 0): 1316
+  ✅ SUCCESS: 773 sequence node(s) were removed.
+Sequence Masking at Depth 2:
+  - Original Sequence Nodes (Graph 0): 2391
+  - Sequence Nodes After Mask (Graph 0): 1525
+  ✅ SUCCESS: 866 sequence node(s) were removed.
+============================================================
+
+Traceback (most recent call last):
+  File "/home/dengyan/SDHyperStructureP/relbench/train_mix.py", line 551, in <module>
+    train_loss_s, primary_loss_s, orthogonal_loss_s = train_model(model, s_train_loader, optimizer, criterion, gpu_device, epoch=epoch)
+  File "/home/dengyan/SDHyperStructureP/relbench/train_mix.py", line 325, in train_model
+    for batch_idx, batch in enumerate(progress_bar):
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 630, in __next__
+    data = self._next_data()
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 673, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 55, in fetch
+    return self.collate_fn(data)
+  File "/home/dengyan/SDHyperStructureP/relbench/train_mix.py", line 140, in custom_collate_safe
+    return custom_collate(batch)
+  File "/home/dengyan/SDHyperStructureP/relbench/train_mix.py", line 95, in custom_collate
+    batch_data = Batch.from_data_list(batch)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch_geometric/data/batch.py", line 97, in from_data_list
+    batch, slice_dict, inc_dict = collate(
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch_geometric/data/collate.py", line 109, in collate
+    value, slices, incs = _collate(attr, values, data_list, stores,
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch_geometric/data/collate.py", line 260, in _collate
+    key, [v[key] for v in values], data_list, stores, increment)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch_geometric/data/collate.py", line 260, in <listcomp>
+    key, [v[key] for v in values], data_list, stores, increment)
+KeyError: 3

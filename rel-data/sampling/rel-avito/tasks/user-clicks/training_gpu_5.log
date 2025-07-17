@@ -1,0 +1,33 @@
+/home/dengyan/SDHyperStructureP/relbench/train.py:45: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  dataset = torch.load(dataset_path)
+Loading preprocessed graph data from: /home/dengyan/relbench-reproduce/rel-data/sampling/rel-avito/tasks/user-clicks/processed/graph_dataset.pt
+Method 1 failed: Ran out of input
+Method 2 failed: module 'torch.serialization' has no attribute 'safe_globals'
+Traceback (most recent call last):
+  File "/home/dengyan/SDHyperStructureP/relbench/train.py", line 34, in load_dataset
+    dataset = torch.load(dataset_path, weights_only=False)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/serialization.py", line 1114, in load
+    return _legacy_load(
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/serialization.py", line 1338, in _legacy_load
+    magic_number = pickle_module.load(f, **pickle_load_args)
+EOFError: Ran out of input
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dengyan/SDHyperStructureP/relbench/train.py", line 39, in load_dataset
+    with torch.serialization.safe_globals([Data, Batch]):
+AttributeError: module 'torch.serialization' has no attribute 'safe_globals'. Did you mean: 'add_safe_globals'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dengyan/SDHyperStructureP/relbench/train.py", line 452, in <module>
+    full_dataset = load_dataset(args.processed_path)
+  File "/home/dengyan/SDHyperStructureP/relbench/train.py", line 45, in load_dataset
+    dataset = torch.load(dataset_path)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/serialization.py", line 1114, in load
+    return _legacy_load(
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/serialization.py", line 1338, in _legacy_load
+    magic_number = pickle_module.load(f, **pickle_load_args)
+EOFError: Ran out of input

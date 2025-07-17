@@ -1,0 +1,48 @@
+Loading preprocessed graph data from: /home/dengyan/relbench-reproduce/rel-data/sampling/rel-stack/tasks/user-engagement/processed/graph_dataset.pt
+Loaded dataset with 2843 graphs
+Data(
+  x=[23965, 300],
+  edge_index=[2, 23964],
+  node_features=[23965],
+  edge_index_by_depth={
+    1=[463],
+    2=[6950],
+    3=[16551],
+  },
+  list_index_sequences_by_depth={
+    1=[4],
+    2=[317],
+    3=[0],
+  },
+  node_timestamps=[23965],
+  entity_id=4
+)
+
+Created a graph map with 2843 entries using key 'UserId'.
+
+Loading tasks from: /home/dengyan/relbench-reproduce/rel-data/sampling/rel-stack/tasks/user-engagement/
+Successfully loaded train, val, and test task files.
+Train tasks: 2000
+Val tasks: 500
+Test tasks: 500
+Batch size: 4
+
+Using device: cuda:5
+Traceback (most recent call last):
+  File "/home/dengyan/SDHyperStructureP/relbench/train.py", line 517, in <module>
+    ).to(device)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1174, in to
+    return self._apply(convert)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/nn/modules/module.py", line 780, in _apply
+    module._apply(fn)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/nn/modules/module.py", line 780, in _apply
+    module._apply(fn)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/nn/modules/module.py", line 805, in _apply
+    param_applied = fn(param)
+  File "/home/dengyan/miniconda3/envs/conda-relbench/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1160, in convert
+    return t.to(
+RuntimeError: CUDA error: out of memory
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
